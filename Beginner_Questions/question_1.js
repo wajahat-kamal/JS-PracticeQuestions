@@ -3,9 +3,10 @@
 let text = "JavaScript is Fun"
 
 function reverse_words(text) {
-    let split_text = text.split(" ")
-    const reverse_text = split_text.reverse()
+    const split_text = text.split("")
+    const reverse_text = split_text.reverse("")
+    const join_text = reverse_text.join("")
 
-    return reverse_text
+    return join_text
 }
 console.log(reverse_words(text))
