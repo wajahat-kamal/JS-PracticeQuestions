@@ -10,19 +10,19 @@ function loginSystem() {
         if (accountLocked){
             return "Account Locked"
         }
-        if (password == realPassword) {
+        if (password === realPassword) {
             passwordCount = 0;
             return "Login Successfull!"
         } else {
             passwordCount++;
             if (passwordCount >= 3) {
                 accountLocked = true
-                return "Incorrect Password"
             }
+            return "Incorrect Password"
         }
     }
 
 }
 
 const login = loginSystem()
-console.log(login("admin123"));
+console.log(login("admin13"));
