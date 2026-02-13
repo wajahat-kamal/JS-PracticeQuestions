@@ -1,23 +1,16 @@
 // Login Attempt Limiter
 
 
-function login(password) {
+function loginSystem() {
     const realPassword = "admin123"
     let passwordCount = 0;
-    let accountStatus = "Unlocked"
-    
-    if (password !== realPassword) {
-        passwordCount++;
-        console.log(passwordCount);
-        return "Incorrect password"
+    let accountLocked = false
+
+    return function login(password) {
+        if (accountLocked){
+            return "Account Locked"
+        }
     }
-    if (passwordCount >= 3) {
-        accountStatus = "Locked"
-        return "Account Locked"
-    }
-  
-    return "Login Successfull!"
 
 }
-let password = "admin"
-console.log(login(password));
+
