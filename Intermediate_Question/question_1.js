@@ -15,12 +15,10 @@ function loginSystem() {
             return "Login Successful!"
         } else {
             passwordCount++;
-            console.log(passwordCount);
             if (passwordCount >= 3) {
                 accountLocked = true
                 return "Incorrect Password – Account Locked"
             }
-            console.log(accountLocked);
             return "Incorrect Password"
         }
     }
@@ -31,5 +29,4 @@ const login = loginSystem()
 console.log(login("admin13"));
 console.log(login("admin134"));
 console.log(login("admin135"));
-console.log(login("admin123"));
 
