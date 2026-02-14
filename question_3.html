@@ -7,7 +7,7 @@
     <title>Fetching dummy data</title>
 </head>
 
-<body>
+<body style="background-color: black;">
 
     <div id="container">
 
@@ -24,9 +24,12 @@
                 
                 products.forEach((product) => {
                     const heading = document.createElement("h1")
+                    const para = document.createElement("p")
                     heading.innerText = product.title
+                    para.innerText = product.description
                     
                     container.append(heading)
+                    container.append(para)
                 });
         }
         getData()
