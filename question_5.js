@@ -13,8 +13,8 @@ function createExpenseTracker() {
             expenses.push(newExpense)
         },
         getTotalExpenses: () => {
-            const total = expenses.reduce((accumulator, currentItem) => {
-                return accumulator + currentItem.amount
+            const total = expenses.reduce((sum, item) => {
+                return sum + item.amount
             }, 0)
             return total
         },
