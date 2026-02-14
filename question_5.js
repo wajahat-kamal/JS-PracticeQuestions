@@ -2,7 +2,7 @@
 
 
 function createExpenseTracker() {
-    let expense = []
+    let expenses = []
     return {
         addExpense: (name, category, amount) => {
             const newExpense = {
@@ -10,22 +10,28 @@ function createExpenseTracker() {
                 category,
                 amount
             }
-            expense.push(newExpense)
+            expenses.push(newExpense)
         },
         getTotalExpenses: () => {
-            const total = expense.reduce((accumulator, currentItem) => {
+            const total = expenses.reduce((accumulator, currentItem) => {
                 return accumulator + currentItem.amount
             }, 0)
             return total
         },
         getCategoryTotal: (category) => {
             let total = 0;
-            expense.filter((item ) => {
+            expenses.filter((item ) => {
                 if(item.category === category){
                     total += item.amount
                 }
             })
             return total
+        },
+        getExpenses: () => {
+            const item = expenses.map((item) => {
+                return item
+            })
+            return item
         }
     }
 }
@@ -38,3 +44,4 @@ tracker.addExpense("T Shirt", "Shopping", 1000)
 
 console.log(tracker.getTotalExpenses());
 console.log(tracker.getCategoryTotal("Food"));
+console.log(tracker.getExpenses()); 
