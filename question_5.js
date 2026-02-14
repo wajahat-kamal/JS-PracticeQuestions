@@ -17,13 +17,24 @@ function createExpenseTracker() {
                 return accumulator + currentItem.amount
             }, 0)
             return total
+        },
+        getCategoryTotal: (category) => {
+            let total = 0;
+            expense.filter((item ) => {
+                if(item.category === category){
+                    total += item.amount
+                }
+            })
+            return total
         }
     }
 }
 
-const expenseTracker = createExpenseTracker()
+const tracker = createExpenseTracker()
 
-expenseTracker.addExpense("Lunch", "Food", 800)
-expenseTracker.addExpense("Lunch", "Food", 800)
+tracker.addExpense("Lunch", "Food", 800)
+tracker.addExpense("Lunch", "Food", 800)
+tracker.addExpense("T Shirt", "Shopping", 1000)
 
-console.log(expenseTracker.getTotalExpenses());
+console.log(tracker.getTotalExpenses());
+console.log(tracker.getCategoryTotal("Food"));
