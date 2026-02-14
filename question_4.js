@@ -12,3 +12,7 @@ const order = [
 ];
 
 
+function processOrder(order, inventory) {
+
+}
+console.log(processOrder(order, inventory));
