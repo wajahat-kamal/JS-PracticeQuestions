@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetching Data</title>
     <style>
+        body{
+            background-color: black;
+        }
         #container {
             height: 100dvh;
             width: 100dvw;
@@ -15,21 +18,22 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .card {
             border: 2px solid black;
-            width: 380px;
-            height: 280px;
+            width: 300px;
+            height: 500px;
             padding: 8px;
+        }
+        .cardImage{
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 
-<body style="background-color: black;">
+<body>
 
-    <div id="container">
-
-    </div>
+    <div id="container"></div>
 
     <script>
         const container = document.getElementById("container")
@@ -40,7 +44,7 @@
 
                 const productsData = await data.json()
                 const products = productsData.products
-                console.log(data);
+                console.log(products);
 
                 if (!data.ok) {
                     throw new Error("Network response was not ok");
@@ -51,11 +55,12 @@
                     const div = document.createElement("div")
                     div.classList.add("card")
                     div.innerHTML = `
+                    <img src=${product.thumbnail} alt=${product.title} class="cardImage" />
                     <h1>${product.title}</h1>
                     <p>${product.description}</p>
                     <div>
                         <h2>${product.category}</h2>
-                        <h2>${product.price}</h2>
+                        <h2>$${product.price}</h2>
                      </div>
                     `
 
