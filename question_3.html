@@ -25,12 +25,12 @@
             products.forEach((product) => {
                 const div = document.createElement("div")
                 div.innerHTML = `
-                     <h1></h1>
-    <p></p>
-    <div>
-        <h2></h2>
-        <h2></h2>
-    </div>
+                    <h1>${product.title}</h1>
+                    <p>${product.description}</p>
+                    <div>
+                        <h2>${product.category}</h2>
+                        <h2>${product.price}</h2>
+                     </div>
                     `
 
                 container.append(div)
