@@ -11,12 +11,12 @@ function createExpenseTracker() {
                 amount
             }
             expenses.push(newExpense)
+            return `Expense added: ${name} - ${category} - $${amount}`;
         },
         getTotalExpenses: () => {
-            const total = expenses.reduce((sum, item) => {
+            return expenses.reduce((sum, item) => {
                 return sum + item.amount
             }, 0)
-            return total
         },
         getCategoryTotal: (category) => {
             return expenses
@@ -24,10 +24,7 @@ function createExpenseTracker() {
                 .reduce((sum, item) => sum + item.amount, 0)
         },
         getExpenses: () => {
-            const item = expenses.map((item) => {
-                return item
-            })
-            return item
+            return [...expenses]
         }
     }
 }
