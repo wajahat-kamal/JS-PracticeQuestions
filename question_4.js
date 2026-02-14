@@ -1,13 +1,19 @@
 // Bank Account System
 
 function createBankAccount(ownerName, initialBalance) {
-    let balance = initialBalance
+    let balance = initialBalance;
+    let history = [];
     return {
         deposit: (amount) => {
             if (amount <= 0) {
                 return "Amount must be more than 0"
             }
             balance += amount
+            history.push({
+                type: "deposit",
+                amount: amount,
+                balanceAfter: balance
+            })
             return balance
 
         },
@@ -18,17 +24,18 @@ function createBankAccount(ownerName, initialBalance) {
                 return "Cannot withdraw negative"
             }
             balance = balance - amount
+            history.push({
+                type: "withdraw",
+                amount: amount,
+                balanceAfter: balance
+            })
             return balance
         },
         getBalance: () => {
             return balance
         },
         transactionHistory: () => {
-            return {
-                type: "deposit" | "withdraw",
-                amount: number,
-                balanceAfter: number
-              }
+            return history
         }
     }
 }
@@ -38,4 +45,4 @@ const account = createBankAccount("Wajahat", 10000)
 console.log(account.deposit(500))
 console.log(account.withdraw(200))
 console.log(account.getBalance())
-// account.transactionHistory()
+console.log(account.transactionHistory())
