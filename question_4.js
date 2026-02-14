@@ -18,9 +18,9 @@ function createBankAccount(ownerName, initialBalance) {
 
         },
         withdraw: (amount) => {
-            if (amount > balance) {
+            if (amount < 0) {
                 return "Cannot withdraw more than balance"
-            } else if (amount < 0) {
+            } else if (amount > balance) {
                 return "Cannot withdraw negative"
             }
             balance = balance - amount
