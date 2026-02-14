@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetching dummy data</title>
+    <title>Fetching Data</title>
+    <style>
+        .container{
+            height: 100dvh;
+            width: 100dvw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            border: 2px solid black;
+            width: 400px;
+            padding: 4px;
+        }
+    </style>
 </head>
 
 <body style="background-color: black;">
@@ -23,6 +38,7 @@
 
             products.forEach((product) => {
                 const div = document.createElement("div")
+                div.classList.add("card")
                 div.innerHTML = `
                     <h1>${product.title}</h1>
                     <p>${product.description}</p>
