@@ -19,13 +19,9 @@ function createExpenseTracker() {
             return total
         },
         getCategoryTotal: (category) => {
-            let total = 0;
-            expenses.filter((item ) => {
-                if(item.category === category){
-                    total += item.amount
-                }
-            })
-            return total
+            return expenses
+                .filter((item) => item.category === category)
+                .reduce((sum, item) => sum + item.amount, 0)
         },
         getExpenses: () => {
             const item = expenses.map((item) => {
