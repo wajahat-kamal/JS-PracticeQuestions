@@ -13,6 +13,6 @@ const order = [
 
 
 function processOrder(order, inventory) {
-
+    let total = 0;
 }
 console.log(processOrder(order, inventory));
