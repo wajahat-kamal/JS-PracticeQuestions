@@ -10,6 +10,7 @@ function createBankAccount(ownerName, initialBalance) {
             }
             balance += amount
             history.push({
+                ownerName: ownerName,
                 type: "deposit",
                 amount: amount,
                 balanceAfter: balance
@@ -25,6 +26,7 @@ function createBankAccount(ownerName, initialBalance) {
             }
             balance = balance - amount
             history.push({
+                ownerName: ownerName,
                 type: "withdraw",
                 amount: amount,
                 balanceAfter: balance
@@ -35,7 +37,7 @@ function createBankAccount(ownerName, initialBalance) {
             return balance
         },
         transactionHistory: () => {
-            return history
+            return [...history]
         }
     }
 }
