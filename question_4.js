@@ -1,18 +1,25 @@
-// Order Processing & Inventory System
+// Bank Account System
 
-const inventory = [
-    { id: 1, name: "Laptop", price: 50000, stock: 5 },
-    { id: 2, name: "Phone", price: 20000, stock: 10 },
-    { id: 3, name: "Headphones", price: 2000, stock: 15 }
-];
+function createBankAccount(ownerName, initialBalance){
+    return {
+        deposit: (amount) => {
+           
+        },
+        withdraw: (amount) => {
 
-const order = [
-    { productId: 1, quantity: 2 },
-    { productId: 3, quantity: 5 }
-];
+        },
+        getBalance: () => {
 
+        },
+        transactionHistory: () => {
 
-function processOrder(order, inventory) {
-    let total = 0;
+        }
+    }
 }
-console.log(processOrder(order, inventory));
+
+const account = createBankAccount("Wajahat", 10000)
+
+account.deposit(500);
+account.withdraw(200);
+account.getBalance();
+account.transactionHistory();
