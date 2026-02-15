@@ -4,15 +4,14 @@
 function createTaskManager() {
     let tasks = []
     return {
-        addTask: (title) => {
-            let id = Math.random()
+        addTask: (title, id) => {
             tasks.push({
                 id: id,
                 title,
                 completed: false,
                 createdAt: new Date()
             })
-            console.log("Task Added Successfully!", tasks);
+            console.log(`Task Added Successfully! ${tasks}`)
         },
         completeTask: (id) => {
             const task = tasks.find((task) => task.id === id)
@@ -20,15 +19,14 @@ function createTaskManager() {
                 return "Task not found!"
             }
             task.completed = true
-            console.log(tasks);
-            return "Task Completed!"
+            console.log(`Task Completed! ${task}`)
         },
     }
 }
 
 const task = createTaskManager()
 
-task.addTask("This is my first task")
-task.addTask("This is my second task")
+task.addTask("This is my first task", 1)
+task.addTask("This is my second task", 2)
 
-console.log(task.completeTask(0.44794367138786206));
+console.log(task.completeTask(2));
