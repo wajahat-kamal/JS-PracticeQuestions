@@ -23,7 +23,7 @@ function createTaskManager() {
             const task = tasks.find((task) => task.id === id)
             if (!task) {
                 return "Task not found!"
-            } else if (task.completed === true){
+            } else if (task.completed){
                 return "Task already completed!"
             }
             task.completed = true
@@ -47,11 +47,15 @@ function createTaskManager() {
             return tasks.filter(task => task.completed === false)
         },
         getStatistics: () => {
+            let completed = 0;
+            for (let task of tasks) {
+                if (task.completed) completed++;
+            }
             return {
                 total: tasks.length,
-                completed: tasks.filter(task => task.completed === true).length,
-                pending: tasks.filter(task => task.completed === false).length
-            }
+                completed,
+                pending: tasks.length - completed
+            };
         }
     }
 }
