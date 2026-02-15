@@ -11,7 +11,7 @@ function createTaskManager() {
                 completed: false,
                 createdAt: new Date()
             })
-            return "Task Added Successfully!", tasks.find((tsk) => tsk.id === id)
+            return "Task Added Successfully!"
 
         },
         completeTask: (id) => {
@@ -20,7 +20,16 @@ function createTaskManager() {
                 return "Task not found!"
             }
             task.completed = true
-            return "Task Completed!", task
+            return "Task Completed!"
+        },
+        removeTask: (id) => {
+            const task = tasks.find((task) => task.id === id)
+            if (!task) {
+                return "Task not found!"
+            }
+            tasks.splice(2, 1)
+            
+            return "Task Deleted Successfully!"
         },
     }
 }
@@ -31,3 +40,5 @@ console.log(task.addTask("This is my first task", 1))
 console.log(task.addTask("This is my second task", 2))
 
 console.log(task.completeTask(2));
+console.log(task.removeTask(2));
+
