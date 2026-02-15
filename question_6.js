@@ -2,15 +2,17 @@
 
 
 function createTaskManager() {
-    let tasks = []
+    let tasks = [];
+    let id = 1;
     return {
-        addTask: (title, id) => {
+        addTask: (title) => {
             tasks.push({
                 id: id,
                 title,
                 completed: false,
                 createdAt: new Date()
             })
+            id++
             return "Task Added Successfully!"
 
         },
@@ -52,16 +54,16 @@ function createTaskManager() {
 
 const task = createTaskManager()
 
-console.log(task.addTask("This is my first task", 1))
-console.log(task.addTask("This is my second task", 2))
+console.log(task.addTask("This is my first task"))
+console.log(task.addTask("This is my second task"))
 
-console.log(task.completeTask(2));
+// console.log(task.completeTask(2));
 // console.log(task.removeTask(2));
-// console.log(task.getAllTasks());
+console.log(task.getAllTasks());
 // console.log(task.getCompletedTasks());
 // console.log(task.getPendingTasks());
 
-console.log(task.getStatistics());
+// console.log(task.getStatistics());
 
 
 
