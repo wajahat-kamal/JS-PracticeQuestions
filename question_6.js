@@ -48,9 +48,9 @@ function createTaskManager() {
         },
         getStatistics: () => {
             return {
-                Total: tasks.length,
-                Completed: tasks.filter(task => task.completed === true).length,
-                Pending: tasks.filter(task => task.completed === false).length
+                total: tasks.length,
+                completed: tasks.filter(task => task.completed === true).length,
+                pending: tasks.filter(task => task.completed === false).length
             }
         }
     }
