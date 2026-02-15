@@ -6,6 +6,9 @@ function createTaskManager() {
     let id = 1;
     return {
         addTask: (title) => {
+            if (!typeof title === "string") {
+                return "Enter valid title"
+            }
             tasks.push({
                 id: id,
                 title,
@@ -56,6 +59,7 @@ const task = createTaskManager()
 
 console.log(task.addTask("This is my first task"))
 console.log(task.addTask("This is my second task"))
+
 
 // console.log(task.completeTask(2));
 // console.log(task.removeTask(2));
