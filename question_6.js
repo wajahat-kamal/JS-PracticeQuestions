@@ -39,6 +39,13 @@ function createTaskManager() {
         },
         getPendingTasks: () => {
             return tasks.filter(task => task.completed === false)
+        },
+        getStatistics: () => {
+            return {
+                Total: tasks.length,
+                Completed: tasks.filter(task => task.completed === true).length,
+                Pending: tasks.filter(task => task.completed === false).length
+            }
         }
     }
 }
@@ -52,7 +59,10 @@ console.log(task.completeTask(2));
 // console.log(task.removeTask(2));
 // console.log(task.getAllTasks());
 // console.log(task.getCompletedTasks());
-console.log(task.getPendingTasks());
+// console.log(task.getPendingTasks());
+
+console.log(task.getStatistics());
+
 
 
 
