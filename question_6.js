@@ -2,18 +2,16 @@
 
 
 function createTaskManager() {
-    let task = {
-        id: number,
-        title: string,
-        completed: false,
-        createdAt: timestamp
-    }
+    let tasks = []
     return {
         addTask: (title) => {
-            task.title = title
-            console.log(task);
-
-        }
+            tasks.push({
+                id: 1,
+                title,
+                completed: false,
+                createdAt: new Date()
+            })
+        },
     }
 }
 
