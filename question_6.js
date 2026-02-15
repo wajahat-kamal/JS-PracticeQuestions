@@ -23,14 +23,15 @@ function createTaskManager() {
             const task = tasks.find((task) => task.id === id)
             if (!task) {
                 return "Task not found!"
+            } else if (task.completed === true){
+                return "Task already completed!"
             }
             task.completed = true
             return "Task Completed!"
         },
         removeTask: (id) => {
-            const task = tasks.find(task => task.id === id)
             const index = tasks.findIndex(task => task.id === id)
-            if (!task) {
+            if (index === -1) {
                 return "Task not found!"
             }
             tasks.splice(index, 1)
