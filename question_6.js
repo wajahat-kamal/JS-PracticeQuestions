@@ -6,7 +6,7 @@ function createTaskManager() {
     let id = 1;
     return {
         addTask: (title) => {
-            if (!typeof title === "string") {
+            if ((!typeof title) === "string" || title.trim().length === 0) {
                 return "Enter valid title"
             }
             tasks.push({
