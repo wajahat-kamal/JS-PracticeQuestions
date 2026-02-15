@@ -23,8 +23,8 @@ function createTaskManager() {
             return "Task Completed!"
         },
         removeTask: (id) => {
-            const task = tasks.find((task) => task.id === id)
-            const index = tasks.findIndex((task) => task.id === id)
+            const task = tasks.find(task => task.id === id)
+            const index = tasks.findIndex(task => task.id === id)
             if (!task) {
                 return "Task not found!"
             }
@@ -35,7 +35,10 @@ function createTaskManager() {
             return [...tasks]
         },
         getCompletedTasks: () => {
-            return tasks.filter((task) => task.completed === true)
+            return tasks.filter(task => task.completed === true)
+        },
+        getPendingTasks: () => {
+            return tasks.filter(task => task.completed === false)
         }
     }
 }
@@ -49,6 +52,8 @@ console.log(task.completeTask(2));
 // console.log(task.removeTask(2));
 // console.log(task.getAllTasks());
 // console.log(task.getCompletedTasks());
+console.log(task.getPendingTasks());
+
 
 
 
