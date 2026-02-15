@@ -29,4 +29,4 @@ const task = createTaskManager()
 task.addTask("This is my first task", 1)
 task.addTask("This is my second task", 2)
 
-console.log(task.completeTask(2));
+task.completeTask(2)
