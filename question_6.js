@@ -24,11 +24,11 @@ function createTaskManager() {
         },
         removeTask: (id) => {
             const task = tasks.find((task) => task.id === id)
+            const index = tasks.findIndex((task) => task.id === id)
             if (!task) {
                 return "Task not found!"
             }
-            tasks.splice(2, 1)
-            
+            tasks.splice(index, 1)
             return "Task Deleted Successfully!"
         },
     }
