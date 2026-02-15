@@ -59,9 +59,9 @@ console.log(task.addTask("This is my second task"))
 
 // console.log(task.completeTask(2));
 // console.log(task.removeTask(2));
-console.log(task.getAllTasks());
 // console.log(task.getCompletedTasks());
 // console.log(task.getPendingTasks());
+// console.log(task.getAllTasks());
 
 // console.log(task.getStatistics());
 
