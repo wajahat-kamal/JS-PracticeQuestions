@@ -23,7 +23,7 @@ function createTaskManager() {
             const task = tasks.find((task) => task.id === id)
             if (!task) {
                 return "Task not found!"
-            } else if (task.completed){
+            } else if (task.completed) {
                 return "Task already completed!"
             }
             task.completed = true
