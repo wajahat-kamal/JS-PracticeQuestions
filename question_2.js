@@ -1,6 +1,5 @@
 // Login Attempt Limiter
 
-
 function loginSystem() {
     const realPassword = "admin123"
     let passwordCount = 0;
@@ -22,7 +21,6 @@ function loginSystem() {
             return "Incorrect Password"
         }
     }
-
 }
 
 const login = loginSystem()
