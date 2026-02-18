@@ -1,10 +1,6 @@
 
 function reverseString(s) {
-    try {
-        return s.split("").reverse().join('')
-    } catch (error) {
-        console.log(error)
-    }
+    return s.split("").reverse().join('')
 }
 
 console.log(reverseString("Wajahat"));
