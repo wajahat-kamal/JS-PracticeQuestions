@@ -12,7 +12,7 @@ function regexVar(s) {
     } else {
         return false;
     }
-
-    // return re;
 }
 console.log(regexVar("abcda"))
+console.log(regexVar("abcd"))
+console.log(regexVar("bcda"))
