@@ -2,9 +2,10 @@
 function vowelsAndConsonants(s) {
     let constantArr = []
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === "a" || s[i] === "e" || s[i] === "i" || s[i] === "o" || s[i] === "u") {
+        let char = s[i].toLowerCase()
+        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
             console.log(s[i])
-        } else{
+        } else {
             constantArr.push(s[i])
         }
     }
