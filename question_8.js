@@ -2,12 +2,10 @@
 
 function regexVar(s) {
 
-    let vowel = "a" || "e" || "i" || "o" || "u"
+    let first = s[0]
+    let last = s(s.length - 1)
 
-
-    if (s.startsWith(vowel) && s.endsWith()) {
-
-    }
+    
 
 
     return re;
