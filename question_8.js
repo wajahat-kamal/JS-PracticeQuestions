@@ -15,4 +15,4 @@ function regexVar(s) {
 
     // return re;
 }
-console.log(regexVar("bcda"))
+console.log(regexVar("abcda"))
