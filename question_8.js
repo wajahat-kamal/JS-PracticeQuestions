@@ -3,11 +3,16 @@
 function regexVar(s) {
 
     let first = s[0]
-    let last = s(s.length - 1)
+    let last = s[s.length - 1]
 
-    
+    if("aeoui".includes(first)){
+        if ("aeiou".includes(last)) {
+            if (first === last) {
+                return true
+            }
+        }
+    }
 
-
-    return re;
+    // return re;
 }
 console.log(regexVar("abcda"))
