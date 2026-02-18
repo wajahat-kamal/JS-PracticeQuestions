@@ -1,14 +1,10 @@
 
 function reverseString(s) {
-    if ((typeof s) === Number) {
-        return s
+    try {
+        return s.split("").reverse().join('')
+    } catch (error) {
+        console.log(error)
     }
-    let reverseArr = []
-    for (let i = 0; i < s.length; i++) {
-        reverseArr.push(s[i])
-    }
-    const result = reverseArr.reverse().join('')
-    return result
 }
 
 console.log(reverseString("Wajahat"));
