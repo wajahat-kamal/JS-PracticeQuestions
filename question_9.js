@@ -12,3 +12,4 @@ function reverseString(s) {
 }
 
 console.log(reverseString("Wajahat"));
+console.log(reverseString("12345"));
