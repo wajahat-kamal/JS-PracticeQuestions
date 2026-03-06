@@ -1,1 +1,1 @@
-//  its not a practice question.
+// its not a practice question. learn object oriented programing in js
