@@ -4,7 +4,7 @@ const user = {
     username: "Wajahat",
     age: 16,
 
-    getUserDetail: function (){
+    getUserDetail: function () {
         return `Username is ${this.username} and age is ${this.age}`
     }
 }
@@ -12,10 +12,15 @@ const user = {
 // console.log(user.getUserDetail());
 
 
-function User(username, loginCount, isLoggedIn){
+function User(username, loginCount, isLoggedIn) {
     this.username = username
     this.loginCount = loginCount
     this.isLoggedIn = isLoggedIn
 
     return this
 }
+
+const userOne = new User("Wajahat", 12, true)
+const userTwo = new User("Kamal", 9, false)
+console.log(userTwo);
+console.log(userOne);
