@@ -5,11 +5,17 @@ const user = {
     age: 16,
 
     getUserDetail: function (){
-        // console.log(this);
         return `Username is ${this.username} and age is ${this.age}`
     }
 }
 
-console.log(user.username);
-console.log(user.getUserDetail());
-// console.log(this);
+// console.log(user.getUserDetail());
+
+
+function User(username, loginCount, isLoggedIn){
+    this.username = username
+    this.loginCount = loginCount
+    this.isLoggedIn = isLoggedIn
+
+    return this
+}
