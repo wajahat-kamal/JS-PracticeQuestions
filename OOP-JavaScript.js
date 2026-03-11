@@ -37,3 +37,7 @@ class Animal {
 const a = new Animal()
 a.name = "rabit"
 // console.log(a);
+
+class Human {
+    
+}
