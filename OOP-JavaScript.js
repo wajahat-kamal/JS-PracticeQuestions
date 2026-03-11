@@ -44,7 +44,7 @@ class Human extends Animal{
         super(name)
     }
     jumps(){
-        console.log();
+        console.log("kood raha ho");
     }
 }
 
