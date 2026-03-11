@@ -27,17 +27,25 @@ const userTwo = new User("Kamal", 9, false)
 
 
 class Animal {
-    constructor(name){
+    constructor(name, location){
         this.name = name
+        this.location = location
     }
     eats(){
         console.log("khaa raha ho");
     }
 }
 const a = new Animal()
-a.name = "rabit"
+a.name = "Rabit"
 // console.log(a);
 
-class Human {
+class Human extends Animal{
+    constructor(name){
+        super(name)
+    }
     
 }
+
+const h = new Human()
+h.name = "Kamal"
+console.log(h);
