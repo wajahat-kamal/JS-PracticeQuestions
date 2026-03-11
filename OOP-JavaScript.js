@@ -43,8 +43,8 @@ class Human extends Animal{
     constructor(name){
         super(name)
     }
-    jumps(){
-        console.log("kood raha ho");
+    run(){
+        console.log("dorh raha ho");
     }
 }
 
