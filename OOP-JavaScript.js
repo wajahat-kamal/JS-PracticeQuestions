@@ -22,5 +22,18 @@ function User(username, loginCount, isLoggedIn) {
 
 const userOne = new User("Wajahat", 12, true)
 const userTwo = new User("Kamal", 9, false)
-console.log(userTwo);
-console.log(userOne);
+// console.log(userTwo);
+// console.log(userOne);
+
+
+class Animal {
+    constructor(name){
+        this.name = name
+    }
+    eats(){
+        console.log("khaa raha ho");
+    }
+}
+const a = new Animal()
+a.name = "rabit"
+// console.log(a);
